@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+        <item
+            android:id="@+id/navigation_home"
+
+            android:title="Balance"/>
+        <item
+            android:id="@+id/expense"
+
+            android:title="expense"/>
+        <item
+            android:id="@+id/income"
+
+            android:title="income"/>
+
+</menu>
+<!--    android:icon="@drawable/ic_dashboard"-->
+<!--    android:icon="@drawable/ic_people"-->
+<!--    android:icon="@drawable/ic_home"-->
