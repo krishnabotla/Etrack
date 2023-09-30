@@ -21,8 +21,9 @@ class BalanceFragment : Fragment() {
     private lateinit var tIncomeTextView: TextView
     private lateinit var tExpenseTextView: TextView
     private lateinit var balanceTextView: TextView
-    private lateinit var editText1: EditText
+    private lateinit var editText1: TextView
     private lateinit var logoutButton: Button
+    private lateinit var noteButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,8 +38,9 @@ class BalanceFragment : Fragment() {
         tIncomeTextView = view.findViewById(R.id.tIncome)
         tExpenseTextView = view.findViewById(R.id.tExpense)
         balanceTextView = view.findViewById(R.id.balance)
-        editText1 = view.findViewById(R.id.editText1)
+        editText1 = view.findViewById(R.id.TextView1)
         logoutButton = view.findViewById(R.id.logout)
+         noteButton = view.findViewById(R.id.noteButton)
 
         val totalExpenseTextView = view.findViewById<TextView>(R.id.tExpense)
         val receivedTotalExpense = arguments?.getFloat("totalExpense", 0.0f) ?: 0.0f
@@ -63,6 +65,15 @@ class BalanceFragment : Fragment() {
 
         balanceTextView.text = "Balance: $${String.format("%.2f", balance)}"
 
+
+
+
+        noteButton.setOnClickListener {
+            val intent = Intent(requireContext(),Note_Activity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }
+
         logoutButton.setOnClickListener {
             auth.signOut()
 
@@ -74,6 +85,7 @@ class BalanceFragment : Fragment() {
             startActivity(intent)
             requireActivity().finish()
         }
+
 
         return view
     }

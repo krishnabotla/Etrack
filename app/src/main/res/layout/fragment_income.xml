@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/CadetBlue"
     tools:context=".incomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
 
 
     <LinearLayout
@@ -28,15 +28,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="full time "
+            android:text="Full time "
+            android:textColor="@color/black"
             android:paddingHorizontal="10dp"
+            android:textSize="18sp"
             />
         <EditText
             android:id="@+id/fulltime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="$0.00"
-            android:inputType="number"/>
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +53,9 @@
             android:id="@+id/parttime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="parttime"
+            android:text="Part time"
+            android:textSize="18sp"
+            android:textColor="@color/black"
             android:paddingHorizontal="10dp"
             />
         <EditText
@@ -58,20 +64,24 @@
             android:layout_height="wrap_content"
             android:hint="$0.00"
             android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             android:layout_marginBottom="30dp"/>
     </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Total income : "
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:id="@+id/tIncome"
+            android:textColor="@color/black"
             android:layout_marginBottom="20dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="calculate"
+            android:text="add"
             android:id="@+id/calculate_button"/>
     </LinearLayout>
 

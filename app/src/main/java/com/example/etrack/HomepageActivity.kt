@@ -44,34 +44,46 @@ class HomepageActivity : AppCompatActivity() {
                 R.id.expense -> showFragment(expenseFragment)
                 R.id.income -> showFragment(incomeFragment)
             }
-            true // you're returning true to indicate that the event has been successfully handled and no further action is needed.
+            true
         }
 
 
-        val totalExpense = intent.getFloatExtra("totalExpense", 0.0f)
+//        val totalExpense = intent.getFloatExtra("totalExpense", 0.0f)
+//
+//
+//
+//        val bundle = Bundle()
+//        bundle.putFloat("totalExpense", totalExpense)
+//        balanceFragment.arguments = bundle
+//
+//
+//
+//        val totalIncome = intent.getFloatExtra("totalIncome", 0.0f)
+//
+//
+//
+//        val Bundle = Bundle()
+//        Bundle.putFloat("totalIncome", totalIncome)
+//        balanceFragment.arguments = Bundle
 
-        // Pass the total expense value to the BalanceFragment
+        val totalExpense = intent.getFloatExtra("totalExpense", 0.0f)
+        val totalIncome = intent.getFloatExtra("totalIncome", 0.0f)
 
         val bundle = Bundle()
         bundle.putFloat("totalExpense", totalExpense)
+        bundle.putFloat("totalIncome", totalIncome)
+
         balanceFragment.arguments = bundle
 
-
-
-        val totalIncome = intent.getFloatExtra("totalIncome", 0.0f)
-
-        // Pass the total expense value to the BalanceFragment
-
-        val Bundle = Bundle()
-        Bundle.putFloat("totalIncome", totalIncome)
-        balanceFragment.arguments = Bundle
 
 
 
     }
 
     private fun showFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().hide(activeFragment).show(fragment).commit()  // responsible for managinging fragment visibility
-        activeFragment = fragment // make the activefragment as current fragment
+        supportFragmentManager.beginTransaction().hide(activeFragment).show(fragment).commit()
+        activeFragment = fragment
     }
+
+
 }

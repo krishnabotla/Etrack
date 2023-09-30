@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".expenseFragment">
+    tools:context=".expenseFragment"
+    android:background="@color/LightBlue">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,6 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Food"
+                android:textColor="@color/black"
                 android:paddingHorizontal="10dp"
                 />
             <EditText
@@ -34,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="$0.00"
+                android:textColor="@color/black"
                 android:inputType="number"/>
         </LinearLayout>
 
@@ -47,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Grocery"
+                android:textColor="@color/black"
                 android:paddingHorizontal="10dp"
                 />
             <EditText
@@ -54,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="$0.00"
+                android:textColor="@color/black"
                 android:inputType="number"/>
         </LinearLayout>
 
@@ -68,6 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Travel"
+                android:textColor="@color/black"
                 android:paddingHorizontal="10dp"
                 />
             <EditText
@@ -75,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="$0.00"
+                android:textColor="@color/black"
                 android:inputType="number"/>
         </LinearLayout>
 
@@ -88,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Others"
+                android:textColor="@color/black"
                 android:paddingHorizontal="10dp"
                 />
             <EditText
@@ -96,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:hint="$0.00"
                 android:inputType="number"
+                android:textColor="@color/black"
                 android:layout_marginBottom="30dp"/>
         </LinearLayout>
 
@@ -104,7 +113,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total expense : "
+            android:textColor="@color/black"
             android:textSize="18sp"
+            android:layout_marginBottom="50dp"
 
             />
 
@@ -112,6 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="add"
+            android:textColor="@color/black"
             android:id="@+id/calculate_button"/>
 
 
